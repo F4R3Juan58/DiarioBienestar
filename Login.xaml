@@ -1,38 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DiarioBienestar2.Login"
-             Title="Login">
+             x:Class="DiarioBienestar2.Login">
     <VerticalStackLayout HorizontalOptions="Center" WidthRequest="400" VerticalOptions="Center">
-        <Label 
-            Text="Usuario"
-            HorizontalOptions="Center"
-            Margin="0,0,0,10"/>
+        <Frame Background="Purple" 
+               HeightRequest="60"
+               Margin="0,0,0,20"
+               BorderColor="White">
+            
+            <Label 
+                Text="Usuario"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Frame>
+        
         <Entry
             x:Name="usuario"
             Placeholder="Usuario"
-            Margin="0,0,0,20"/>
+            Margin="0,0,0,40"/>
 
-        <Label 
-            Text="Password"
-            HorizontalOptions="Center"
-            Margin="0,0,0,10"/>
+        <Frame Background="Purple" 
+               HeightRequest="60"
+               Margin="0,0,0,20"
+               BorderColor="White">
+            
+                    <Label 
+                    Text="Password"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>  
+        </Frame>
+       
         <Entry
             x:Name="password"
             Placeholder="Password"
-            Margin="0,0,0,40"/>
+            Margin="0,0,0,40"
+            />
 
         <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="60">
             <Button
                 Text="Registro"
                 Clicked="onRegistroClick"
+                TextColor="White"
+                FontAttributes="Bold"
                 WidthRequest="190"
-                Margin="0,0,10,0"/>
+                Margin="5"
+                BorderColor="White"
+                Background="Purple"
+                Padding="30,10,30,10"
+                BorderWidth="2"/>
             <Button
                 Text="Login"
                 Clicked="onLoginClick"
+                TextColor="White"
+                FontAttributes="Bold"
                 WidthRequest="190"
-                Margin="10,0,0,0"/>    
+                BorderColor="White"
+                Background="Purple"
+                Margin="5"
+                Padding="30,10,30,10"
+                BorderWidth="2"/>
+
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
