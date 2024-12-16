@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.RegistroDiario"
+             Title="Registro Diario">
+    <VerticalStackLayout Margin="10">
+        <HorizontalStackLayout Margin="0,0,0,10">
+            <Label 
+                Text="Como te sientes:" VerticalOptions="Center" Margin="0,0,10,0"/>
+            <Entry
+                x:Name="estadoAnimo"
+                Placeholder="estado de animo"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,0,0,10">
+            <Label 
+                Text="Actividades realizadas:" VerticalOptions="Center" Margin="0,0,10,0"/>
+            <Entry
+                x:Name="actividades"
+                Placeholder="actividades"/>
+        </HorizontalStackLayout>
+
+        <Label
+            Text="CONTROLES:"
+            Margin="0,0,0,10"/>
+        <Frame>
+            <VerticalStackLayout>
+                <Label
+                    Text="Detalles sobre tu día"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <Editor
+                    x:Name="detallesDia"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame>
+            <VerticalStackLayout >
+                <Label
+                    Text="Intensidad de la actividad"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <Slider
+                    x:Name="slider"
+                    Minimum="0"
+                    ThumbColor="red"
+                    MinimumTrackColor="blue"
+                    MaximumTrackColor="red"
+                    Maximum="10"
+                    ValueChanged="OnSliderValueChanged"
+                    Margin="0,0,0,10"/>
+                <Label
+                    Text="Nivel de intensidad"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <ProgressBar
+                    x:Name="progressBar"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,10"/>
+
+            </VerticalStackLayout>
+        </Frame>
+        <Frame>
+            <VerticalStackLayout>
+                <Label
+                    Text="Nivel de energia"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <Label
+                    x:Name="stepperLabel"
+                    Text="0"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <Stepper
+                    x:Name="stepper"
+                    HorizontalOptions="Center"
+                    Minimum="0" 
+                    Maximum="5" 
+                    Increment="1" 
+                    ValueChanged="OnStepperValueChanged"
+                    Margin="0,0,0,10"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame>
+            <VerticalStackLayout>
+                <Label
+                    Text="Seleccione fecha"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+                <DatePicker
+                    x:Name="fecha"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Button
+            Text="Guardar Registro" 
+            Margin="10"
+            Clicked="onGuardarClicker"/>
+
+    </VerticalStackLayout>
+</ContentPage>

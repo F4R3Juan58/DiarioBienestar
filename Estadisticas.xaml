@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.Estadisticas"
+             Title="Estadisticas">
+    <VerticalStackLayout Margin="10" Spacing="20">
+        <Frame BorderColor="LightGray" Padding="10" CornerRadius="10">
+            <VerticalStackLayout>
+                <Label Text="Promedio de la última semana" FontSize="20" HorizontalOptions="Center" />
+                <Label x:Name="lblPromedioActividad" Text="Actividad física: -" FontSize="16" />
+                <Label x:Name="lblPromedioEnergia" Text="Nivel de energía: -" FontSize="16" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BorderColor="LightGray" Padding="10" CornerRadius="10">
+            <VerticalStackLayout>
+                <Label Text="Progreso General" FontSize="20" HorizontalOptions="Center" />
+                <ProgressBar x:Name="progressGeneral" Progress="0" HeightRequest="20" />
+                <Label x:Name="lblProgreso" Text="0%" HorizontalOptions="Center" FontSize="16" />
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

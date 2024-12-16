@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.Login"
+             Title="Login">
+    <VerticalStackLayout HorizontalOptions="Center" WidthRequest="400" VerticalOptions="Center">
+        <Label 
+            Text="Usuario"
+            HorizontalOptions="Center"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="usuario"
+            Placeholder="Usuario"
+            Margin="0,0,0,20"/>
+
+        <Label 
+            Text="Password"
+            HorizontalOptions="Center"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="password"
+            Placeholder="Password"
+            Margin="0,0,0,40"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="60">
+            <Button
+                Text="Registro"
+                Clicked="onRegistroClick"
+                WidthRequest="190"
+                Margin="0,0,10,0"/>
+            <Button
+                Text="Login"
+                Clicked="onLoginClick"
+                WidthRequest="190"
+                Margin="10,0,0,0"/>    
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
