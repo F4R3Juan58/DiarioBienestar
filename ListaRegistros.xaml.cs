@@ -56,11 +56,10 @@ namespace DiarioBienestar2
                     using (var connection = new SqliteConnection(connectionString))
                     {
                         connection.Open();
-                        string query = "DELETE FROM registro_diario WHERE id = @id";
+                        string query = "DELETE FROM registroDiario WHERE id = @id";
 
                         using (var command = new SqliteCommand(query, connection))
                         {
-                            // Extraer el ID del registro
                             string id = registro.Split(':')[0];
                             command.Parameters.AddWithValue("@id", id);
                             command.ExecuteNonQuery();
