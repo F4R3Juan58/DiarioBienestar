@@ -57,14 +57,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microcharts" Version="0.9.5.9" />
 		<PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="SkiaSharp" Version="3.116.1" />
+		<PackageReference Include="Syncfusion.Maui.Charts" Version="28.1.39" />
+		<PackageReference Include="Syncfusion.Maui.Core" Version="28.1.39" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Registro.xaml">
+	  <MauiXaml Update="EditarRegistroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

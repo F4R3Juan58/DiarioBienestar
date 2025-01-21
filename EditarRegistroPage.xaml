@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.EditarRegistroPage"
+                          Title="Editar Registro">
+    <StackLayout Padding="20">
+        <Label Text="Detalles del día:" 
+               Margin="0,0,0,10"/>
+        <Editor Text="{Binding Detalles}" AutoSize="TextChanges" />
+
+        <Label Text="Intensidad:" 
+               Margin="0,20,0,10"/>
+
+        <StackLayout VerticalOptions="Center">
+            <Slider x:Name="intensidadSlider" 
+                    Value="{Binding Intensidad, Mode=TwoWay}" 
+                    Minimum="0" 
+                    Maximum="10" 
+                    ValueChanged="OnSliderValueChanged"
+                    MinimumTrackColor="#6A0DAD"
+                    MaximumTrackColor="#800080"/>
+
+            <Label x:Name="intendidadTxt"
+                Text="{Binding Intensidad}" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   FontSize="Medium" 
+                   TextColor="Gray" />
+        </StackLayout>
+
+        <Label Text="Nivel de Energía:" 
+               Margin="0,20,0,10"/>
+        <Label
+            x:Name="stepperLabel"
+            Text="0"
+            HorizontalOptions="Center"
+            Margin="0,0,0,10"/>
+        <Stepper
+            x:Name="stepper"
+            Value="{Binding NivelEnergia}"
+            HorizontalOptions="Center"
+            Minimum="0" 
+            Maximum="5" 
+            Increment="1" 
+            ValueChanged="OnStepperValueChanged"
+            Margin="0,0,0,10"/>
+
+        <Button Text="Guardar Cambios" Clicked="GuardarCambios" 
+                Margin="0,20,0,0"/>
+    </StackLayout>
+</ContentPage>

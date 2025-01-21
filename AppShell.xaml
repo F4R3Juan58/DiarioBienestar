@@ -28,9 +28,9 @@
             Route="Estadisticas" />
         
         <ShellContent
-            Title="ListaRegistros"
+            Title="Lista de Registros"
             ContentTemplate="{DataTemplate local:ListaRegistros}"
-            Route="Lista Registros" />
+            Route="ListaRegistros" />
     </TabBar>
 
 

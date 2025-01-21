@@ -1,13 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DiarioBienestar2.Inicio"
-             Title="Pagina de Inicio">
+             x:Class="DiarioBienestar2.Inicio">
 
     <Frame>
         <VerticalStackLayout>
-            <Label Text="" x:Name="msgBienvenida" HorizontalOptions="Center"/>
-            <Label Text="Uso de Aplicación" HorizontalOptions="Center"/>
+            <Label Text="" x:Name="msgBienvenida" HorizontalOptions="Center" FontSize="50" FontAttributes="Bold"
+                   Margin="0,20,0,20"/>
+
+            <Frame BorderColor="White" Padding="15" Margin="0,20,0,20">
+                <VerticalStackLayout>
+                    <Label Text="Resumen del Día" FontSize="20" />
+                    <Label x:Name="details"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Nivel de intensidad: 10" />
+                        <Label x:Name="intensity"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Energía: 5" />
+                        <Label x:Name="energy"/>
+                    </HorizontalStackLayout>
+                    <Label Text="Ejercicio realizado: 60 minutos" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid RowDefinitions="Auto"
+                  Margin="10"
+      ColumnDefinitions="*, *, *"
+                  >
+                <!-- Primer botón -->
+                <Button Text="Ver mi Diario"
+            FontSize="16"
+            BackgroundColor="#6A0DAD"
+            TextColor="White"
+            Clicked="OnVerDiarioClicked"
+            HorizontalOptions="FillAndExpand"
+            Grid.Row="0"
+            Grid.Column="0"
+                        Margin="10"
+                        BorderColor="White"
+BorderWidth="2"/>
+
+                <!-- Segundo botón -->
+                <Button Text="Agregar Nueva Entrada"
+            FontSize="16"
+            BackgroundColor="#6A0DAD"
+            TextColor="White"
+            Clicked="OnAgregarEntradaClicked"
+            HorizontalOptions="FillAndExpand"
+            Grid.Row="0"
+            Grid.Column="1" 
+                        Margin="10"
+                        BorderColor="White"
+BorderWidth="2"/>
+
+                <!-- Tercer botón -->
+                <Button Text="Ver Estadísticas"
+            FontSize="16"
+            BackgroundColor="#6A0DAD"
+            TextColor="White"
+            Clicked="OnVerEstadisticasClicked"
+            HorizontalOptions="FillAndExpand"
+            Grid.Row="0"
+            Grid.Column="2"
+                        Margin="10"
+                        BorderColor="White"
+                        BorderWidth="2"/>
+            </Grid>
+
+
+
+            <Frame BorderColor="Gray" Padding="15" Margin="0,20,0,20">
+                <VerticalStackLayout>
+                    <Label Text="Progreso Semanal" FontSize="20" />
+
+                    <Label Text="Actividad Fisica Promedio" FontSize="15" />
+                    <ProgressBar x:Name="progressActividad" Progress="0" HeightRequest="20" />
+                    <Label Text="Nivel de Energia Promedio" FontSize="15" />
+                    <ProgressBar x:Name="progressEnergia" Progress="0.1" HeightRequest="20" />
+
+                    <Label x:Name="labelComparacion" FontSize="16" TextColor="White" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Mensaje inspirador -->
+            <Frame BorderColor="Gray" Padding="15" Margin="0,20,0,20">
+                <Label Text="Tu bienestar es tu prioridad. ¡Sigue adelante!" 
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+            </Frame>
+
         </VerticalStackLayout>
     </Frame>
 </ContentPage>
